@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AI Animation Platform</title>
+    <style>
+        body {
+            font-family: sans-serif;
+        }
+        #animation-container {
+            width: 640px; /* Adjust as needed */
+            height: 480px; /* Adjust as needed */
+            background-color: #eee; /* Placeholder */
+            border: 1px solid #ccc;
+        }
+        #script-input {
+            width: 95%;
+            height: 150px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>AI Animation Platform</h1>
+
+    <label for="script-input">Script:</label><br>
+    <textarea id="script-input">
+CharacterA: Hello!
+CharacterB: Hi there!
+CharacterA: How are you today?
+    </textarea><br>
+
+    <button onclick="generateAnimation()">Generate Animation</button>
+
+    <div id="animation-container">
+        <video id="animation-video" controls width="100%"></video>  </div>
+
+    <script>
+        function generateAnimation() {
+            const script = document.getElementById("script-input").value;
+
+            // In a real application, you would send the script to your backend (e.g., Python server)
+            // for processing and animation generation.  This example uses a placeholder.
+
+            // Placeholder: Simulate animation generation (replace with actual backend integration)
+            // For this simplified example, we'll just create a dummy video URL.
+            const dummyVideoURL = "placeholder_animation.mp4"; // Replace with your actual video generation logic
+
+            const videoElement = document.getElementById("animation-video");
+            videoElement.src = dummyVideoURL;
+            videoElement.load(); // Important to load the new source
+        }
+    </script>
+
+</body>
+</html>
